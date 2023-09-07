@@ -12,7 +12,7 @@ z =0
 h=0
 
 
-bot = telebot.TeleBot('1573212023:AAG6D0RWmDDKKHI7LYVNsF985OYkSVTOazE')
+bot = telebot.TeleBot('Token)')
 
 @bot.message_handler(commands = ['info'])
 @bot.message_handler(func=lambda m: True)
