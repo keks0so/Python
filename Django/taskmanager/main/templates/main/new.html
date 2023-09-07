@@ -1,0 +1,47 @@
+{% extends 'main/index.html' %}
+
+{% block title %}Отсутствующие{% endblock %}
+
+{% block content %}
+<center>
+    <h1 class = 'title'>Страница для отмечивания отсутствующих</h1>
+    <font class = 'outhertext'>
+        <p>Введите номер группы:</p>
+        <p>
+            <input type="text" id="group_number" class = 'denis' placeholder="1к9393 (к - маленькая русская)">
+        </p>
+            <label for="case">Введите ФИО отсутствующего</label>
+        <p>
+            <input type="text" id="missedname" class = 'denis' placeholder="Пирогов Денис Владимирович">
+        </p>
+        <form action = "" method="post">
+
+            {% crsf_token %}
+            
+            <div class="form-check">
+                <p>Выберите причину отсутствия</p>
+                <p>
+                    <input type="radio" value="spravka" checked name="miss"/>справка
+                </p>
+                <p>
+                    <input type="radio" value="zayavlenie" name="miss"/>заявление
+                </p>
+                
+                    <input type="text"  id="case" class = 'denis'  placeholder="11.03.22 - 25.03.22">
+                </p>
+                <p>
+                    <input type="radio" value="drugoe" name="miss"/>другое
+                </p>
+                
+                
+                <p>
+                    <input type="text"  id="case" class = 'denis'  placeholder="соревнвания">
+                </p>
+                <p>
+                    <button class = 'button' type="submit">Отправить</button>
+                </p>
+            </div>
+        </form>
+    </font>
+</center>
+{% endblock %}

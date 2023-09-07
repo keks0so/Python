@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    .denis {
+        font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif; 
+        position: relative;
+        width: 20%;
+        font-size: 80%;
+    }
+    .title {
+        font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif; 
+        position: center;
+        width: 35%;
+        font-size: 200%;
+    }
+    .outhertext{
+        font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif; 
+        position: center;
+        width: 30%;
+        font-size: 150%;
+    }
+    .button{
+        font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif; 
+        position: center;
+        width: 15%;
+        font-size: 130%;
+        color:black;
+        background-color: rgba(3, 192, 255, 0.973);
+    }
+    </style>
+    <title>Отсутствующие</title>
+</head>
+<body>
+    <center>
+        <h1 class = 'title'>Страница посещаемости учащихся вашей группы</h1>
+        <font class = 'outhertext'>
+            
+            <form action = "" method="post">
+                {% csrf_token %}
+                <div class="form-check">
+                   
+                        <label for="case">Введите Фамилию отсутствующего</label>
+                    <p>
+                        <input type="text" id="missedname" class = 'denis' name = "fio" placeholder="Пирогов (пример)">
+                    </p>
+                </div>
+                
+                <div class="form-check">
+                    <p>Выберите причину отсутствия</p>
+                    <p>
+                        <input type="radio" value="spravka" checked name="miss"/>справка
+                    </p>
+                    <p>
+                        <input type="radio" value="neuvaj" checked name="miss"/>неуважительная
+                    </p>
+                    <p>
+                        <input type="radio" value="zayavlenie" name="miss"/>заявление
+                    </p>
+                    
+                        <input type="text"  id="case" class = 'denis' name = "zayava" placeholder="11.03.22 - 25.03.22 (пример)">
+                    </p>
+                    <p>
+                        <input type="radio" value="drugoe" name="miss"/>другое
+                    </p>
+                    
+                    <p>
+                        <input type="text"  id="case" class = 'denis' name = "drug"  placeholder="Соревнования (пример)">
+                    </p>
+                    <p>
+                        <button class = 'button' type="submit" href="{% url 'home' %}">Отправить</button>
+                    </p>
+                </div>
+            </form>
+        </font>
+    </center>
+</body>
+</html>

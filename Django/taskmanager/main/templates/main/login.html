@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    .denis {
+        font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif; 
+        position: relative;
+        width: 20%;
+        font-size: 80%;
+    }
+    .title {
+        font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif; 
+        position: center;
+        width: 35%;
+        font-size: 200%;
+    }
+    .outhertext{
+        font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif; 
+        position: center;
+        width: 30%;
+        font-size: 150%;
+    }
+    .button{
+        font-family: Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif; 
+        position: center;
+        width: 15%;
+        font-size: 130%;
+        color:black;
+        background-color: rgba(3, 192, 255, 0.973);
+    }
+    </style>
+    <title>Отсутствующие</title>
+</head>
+<body>
+    <center>
+        <h1 class = 'title'>Введите логин и пароль</h1>
+        <font class = 'outhertext'>
+            
+            <form action = "" method="post">
+                {% csrf_token %}
+                <div class="form-check">
+                    <p>Введите логин</p>
+                    <p>
+                        <input type="text" id="login" class = 'denis' name = "login" >
+                    </p>
+                        <label for="case">Введите пароль</label>
+                    <p>
+                        <input type="password" id="password" class = 'denis' name = "password" >
+                    </p>
+                </div>
+                <div>
+                    <p>
+                        <button class = 'button' type="submit" >Войти</button>
+                    </p>
+                </div>
+            </form>
+        </font>
+    </center>
+</body>
+</html>
