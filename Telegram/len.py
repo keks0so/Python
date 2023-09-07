@@ -8,7 +8,7 @@ a = -999
 b = -999
 e = -999
 
-bot = telebot.TeleBot("1606634697:AAHQwxo2ItpZUmVgm7_jBiApG31hHZ1GARI")
+bot = telebot.TeleBot("Token)")
 	
 @bot.message_handler(func=lambda m: True)
 def echo_all(message):
