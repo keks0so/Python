@@ -1,0 +1,1 @@
+This is my calculator created using the PyQt5 library. It has functions such as "CE", removing the last character in a string, addition, subtraction, factorial, division with remainder, division without remainder, as well as multiplication and squaring, and square root extraction 
