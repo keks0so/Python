@@ -11,7 +11,7 @@ b = 0
 quest = 0
 
 
-bot = Bot(token = "5958320120:AAGUyJKAehDre-ja4LLFQsCRygswHhCWKcw")
+bot = Bot(token = "Token)")
 dp = Dispatcher(bot)
 
 button_A = KeyboardButton("A)")
