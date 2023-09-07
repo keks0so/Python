@@ -12,7 +12,7 @@ import json
 
 quest = 0
 
-bot = Bot(token = "6225304880:AAEI1G5eatn78d440bzHEh4FKHc2xdpUrss")
+bot = Bot(token = "Token)")
 dp = Dispatcher(bot)
 
 #клавиатура для вещей
