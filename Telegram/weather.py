@@ -7,7 +7,7 @@ print(Fore.BLACK)
 print(Back.WHITE)
 
 
-owm = pyowm.OWM('d86576be0c0e7501a1845bff77f26d8c')
+owm = pyowm.OWM('Token)')
 
 place = input('А на этот раз откуда тебе погода нужна?: ')
 
